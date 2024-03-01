@@ -16,6 +16,7 @@ fun FitnessAppTheme(content: @Composable () -> Unit) {
 
     MaterialTheme(
         colorScheme = colorScheme,
-        content = content
+        content = content,
+        typography = fitnessAppTypography
     )
 }
