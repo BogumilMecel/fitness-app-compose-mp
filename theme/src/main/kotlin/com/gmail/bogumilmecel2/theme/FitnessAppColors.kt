@@ -1,4 +1,4 @@
-package com.gmail.bogumilmecel2
+package com.gmail.bogumilmecel2.theme
 
 import androidx.compose.material3.ColorScheme
 import androidx.compose.runtime.Immutable
