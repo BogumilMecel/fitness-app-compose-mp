@@ -1,15 +1,14 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
-    alias(libs.plugins.jetbrainsCompose)
 }
 
 android {
-    namespace = "com.gmail.bogumilmecel2.ui"
+    namespace = "com.gmail.bogumilmecel2.auth"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.gmail.bogumilmecel2.ui"
+        applicationId = "com.gmail.bogumilmecel2.auth"
         minSdk = 24
         targetSdk = 34
         versionCode = 1
@@ -33,6 +32,5 @@ android {
 }
 
 dependencies {
-    implementation(compose.foundation)
-    implementation(compose.material3)
+
 }
