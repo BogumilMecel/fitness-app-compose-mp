@@ -1,8 +1,8 @@
 plugins {
-    alias(libs.plugins.androidApplication)
-    alias(libs.plugins.jetbrainsKotlinAndroid)
-    alias(libs.plugins.jetbrainsCompose)
-    alias(libs.plugins.kotlinx.serialization)
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.jetbrains.compose)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -32,6 +32,8 @@ android {
 }
 
 dependencies {
-    implementation(libs.koin.core)
-    implementation(libs.kotlinx.serialization.json)
+    implementation(compose.material3)
+    api(compose.runtime)
+    api(libs.koin.core)
+    api(libs.kotlinx.serialization.json)
 }

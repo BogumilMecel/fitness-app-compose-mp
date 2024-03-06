@@ -1,9 +1,10 @@
-package com.gmail.bogumilmecel2.theme
+package com.gmail.bogumilmecel2.shared.theme
 
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import com.gmail.bogumilmecel2.shared.R
 
 internal object FitnessAppFont {
     val roboto = FontFamily(

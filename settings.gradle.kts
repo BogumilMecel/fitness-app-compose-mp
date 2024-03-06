@@ -3,7 +3,6 @@ enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 include(":composeApp")
 include(":ui")
-include(":theme")
 include(":shared")
 include(":auth")
 
