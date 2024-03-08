@@ -9,6 +9,7 @@ compose-plugin = "1.6.0"
 kotlin = "1.9.22"
 koin = "3.5.3"
 kotlinx-serialization = "1.6.3"
+kotlin-logging = "1.4.2"
 
 [libraries]
 androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "androidx-activityCompose" }
@@ -16,6 +17,7 @@ compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling", version.ref = 
 compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview", version.ref = "compose" }
 koin-core = { module = "io.insert-koin:koin-core", version.ref = "koin" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+kotling-logging = { module = "org.lighthousegames:logging", version.ref = "kotlin-logging" }
 
 
 [plugins]
