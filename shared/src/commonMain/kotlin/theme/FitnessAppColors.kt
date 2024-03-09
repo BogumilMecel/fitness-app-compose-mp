@@ -1,6 +1,5 @@
 package theme
 
-import androidx.compose.material3.ColorScheme
 import androidx.compose.runtime.Immutable
 import androidx.compose.ui.graphics.Color
 
@@ -91,35 +90,3 @@ private val errorDark = Color(0xffffb4ab)
 
 private val borderLight = Color(0xFFE6E6E6)
 private val borderDark = Color(0xFF363636)
-
-fun FitnessAppColorScheme.toColorScheme() = ColorScheme(
-    primary = primary,
-    onPrimary = onPrimary,
-    primaryContainer = surface,
-    onPrimaryContainer = onBackground,
-    inversePrimary = primary,
-    secondary = primary,
-    onSecondary = onPrimary,
-    secondaryContainer = surface,
-    onSecondaryContainer = onBackground,
-    tertiary = primary,
-    onTertiary = onPrimary,
-    tertiaryContainer = surface,
-    onTertiaryContainer = onBackground,
-    background = background,
-    onBackground = onBackground,
-    surface = surface,
-    onSurface = onBackground,
-    surfaceVariant = surface,
-    onSurfaceVariant = onBackground,
-    surfaceTint = surface,
-    inverseSurface = surface,
-    inverseOnSurface = surface,
-    error = error,
-    onError = contentPrimary,
-    errorContainer = backgroundError,
-    onErrorContainer = contentPrimary,
-    outline = border,
-    outlineVariant = border,
-    scrim = border
-)
