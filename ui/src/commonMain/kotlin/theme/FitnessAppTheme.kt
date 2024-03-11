@@ -9,10 +9,10 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import fitness_app_compose_mutliplatform.shared.generated.resources.Res
-import fitness_app_compose_mutliplatform.shared.generated.resources.roboto_bold
-import fitness_app_compose_mutliplatform.shared.generated.resources.roboto_medium
-import fitness_app_compose_mutliplatform.shared.generated.resources.roboto_regular
+import fitness_app_compose_mutliplatform.ui.generated.resources.Res
+import fitness_app_compose_mutliplatform.ui.generated.resources.roboto_bold
+import fitness_app_compose_mutliplatform.ui.generated.resources.roboto_medium
+import fitness_app_compose_mutliplatform.ui.generated.resources.roboto_regular
 import org.jetbrains.compose.resources.ExperimentalResourceApi
 import org.jetbrains.compose.resources.Font
 

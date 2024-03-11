@@ -1,6 +1,7 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.multiplatform)
+    alias(libs.plugins.jetbrains.compose)
 }
 
 kotlin {
@@ -26,6 +27,11 @@ kotlin {
     sourceSets {
         androidMain.dependencies {
             implementation(libs.androidx.activity.compose)
+        }
+        commonMain.dependencies {
+            implementation(project(":shared"))
+
+            implementation(compose.components.resources)
         }
     }
 }

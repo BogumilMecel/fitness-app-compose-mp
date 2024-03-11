@@ -29,9 +29,15 @@ kotlin {
             implementation(libs.androidx.activity.compose)
         }
         commonMain.dependencies {
+            //compose
             api(compose.material3)
+            api(compose.runtime)
+            api(compose.ui)
+            api(project(":ui"))
             api(libs.kotling.logging)
-            implementation(compose.components.resources)
+
+            //navigation
+            api(libs.voyager.navigator)
         }
     }
 }

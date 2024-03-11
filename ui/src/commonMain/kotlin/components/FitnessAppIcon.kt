@@ -1,4 +1,4 @@
-package com.gmail.bogumilmecel2.ui.components.base
+package components
 
 import androidx.compose.material.Icon
 import androidx.compose.material.icons.Icons
@@ -24,16 +24,38 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.graphics.vector.ImageVector
-import androidx.compose.ui.res.painterResource
-import androidx.compose.ui.res.stringResource
-import com.gmail.bogumilmecel2.ui.R
-import com.gmail.bogumilmecel2.ui.theme.FitnessAppTheme
+import fitness_app_compose_mutliplatform.ui.generated.resources.Res
+import fitness_app_compose_mutliplatform.ui.generated.resources.account
+import fitness_app_compose_mutliplatform.ui.generated.resources.add
+import fitness_app_compose_mutliplatform.ui.generated.resources.arrow_down
+import fitness_app_compose_mutliplatform.ui.generated.resources.back
+import fitness_app_compose_mutliplatform.ui.generated.resources.barcode
+import fitness_app_compose_mutliplatform.ui.generated.resources.barcode_scan
+import fitness_app_compose_mutliplatform.ui.generated.resources.cancel
+import fitness_app_compose_mutliplatform.ui.generated.resources.clear
+import fitness_app_compose_mutliplatform.ui.generated.resources.copy
+import fitness_app_compose_mutliplatform.ui.generated.resources.edit
+import fitness_app_compose_mutliplatform.ui.generated.resources.email
+import fitness_app_compose_mutliplatform.ui.generated.resources.error
+import fitness_app_compose_mutliplatform.ui.generated.resources.favorite
+import fitness_app_compose_mutliplatform.ui.generated.resources.favorite_filled
+import fitness_app_compose_mutliplatform.ui.generated.resources.info
+import fitness_app_compose_mutliplatform.ui.generated.resources.log_out
+import fitness_app_compose_mutliplatform.ui.generated.resources.login
+import fitness_app_compose_mutliplatform.ui.generated.resources.password
+import fitness_app_compose_mutliplatform.ui.generated.resources.save
+import fitness_app_compose_mutliplatform.ui.generated.resources.search
+import org.jetbrains.compose.resources.ExperimentalResourceApi
+import org.jetbrains.compose.resources.StringResource
+import org.jetbrains.compose.resources.painterResource
+import org.jetbrains.compose.resources.stringResource
+import theme.FitnessAppTheme
 
 @Composable
 fun CustomIcon(
     modifier: Modifier = Modifier,
     icon: Icon,
-    tint: Color = FitnessAppTheme.colors.Primary
+    tint: Color = FitnessAppTheme.colors.contentPrimary
 ) {
     when(icon) {
         is IconPainter -> {
@@ -54,125 +76,130 @@ fun CustomIcon(
     }
 }
 
+@OptIn(ExperimentalResourceApi::class)
 @Composable
 private fun CustomIcon(
     modifier: Modifier = Modifier,
     vector: IconVector,
-    tint: Color = FitnessAppTheme.colors.Primary
+    tint: Color
 ) = with(vector) {
     Icon(
         modifier = modifier,
         imageVector = imageVector,
-        contentDescription = stringResource(id = vector.contentDescriptionId),
+        contentDescription = stringResource(resource = vector.contentDescriptionResource),
         tint = tint
     )
 }
 
+@OptIn(ExperimentalResourceApi::class)
 @Composable
 private fun CustomIcon(
     modifier: Modifier = Modifier,
     painter: IconPainter,
-    tint: Color = FitnessAppTheme.colors.Primary
+    tint: Color = FitnessAppTheme.colors.contentPrimary
 ) = with(painter) {
     Icon(
         modifier = modifier,
         painter = imagePainter,
-        contentDescription = stringResource(id = contentDescriptionId),
+        contentDescription = stringResource(painter.contentDescriptionResource),
         tint = tint
     )
 }
 
+@OptIn(ExperimentalResourceApi::class)
 interface Icon {
-    val contentDescriptionId: Int
+    val contentDescriptionResource: StringResource
 }
 
+@OptIn(ExperimentalResourceApi::class)
 data class IconPainter(
     val imagePainter: Painter,
-    override val contentDescriptionId: Int
+    override val contentDescriptionResource: StringResource
 ): Icon
 
+@OptIn(ExperimentalResourceApi::class)
 sealed class IconVector(
     val imageVector: ImageVector,
-    override val contentDescriptionId: Int
+    override val contentDescriptionResource: StringResource
 ): Icon {
     companion object {
         @Composable
         fun barcode() = IconPainter(
-            imagePainter = painterResource(id = R.drawable.barcode_scan),
-            contentDescriptionId = R.string.barcode
+            imagePainter = painterResource(Res.drawable.barcode_scan),
+            contentDescriptionResource = Res.string.barcode
         )
     }
 
     data object Heart: IconVector(
         imageVector = Icons.Default.FavoriteBorder,
-        contentDescriptionId = R.string.favorite
+        contentDescriptionResource = Res.string.favorite
     )
     data object HeartFilled: IconVector(
         imageVector = Icons.Filled.Favorite,
-        contentDescriptionId = R.string.favorite_filled
+        contentDescriptionResource = Res.string.favorite_filled
     )
     data object Back: IconVector(
         imageVector = Icons.AutoMirrored.Filled.ArrowBack,
-        contentDescriptionId = R.string.back
+        contentDescriptionResource = Res.string.back
     )
     data object Search: IconVector(
         imageVector = Icons.Default.Search,
-        contentDescriptionId = R.string.search
+        contentDescriptionResource = Res.string.search
     )
     data object Cancel: IconVector(
         imageVector = Icons.Default.Search,
-        contentDescriptionId = R.string.cancel
+        contentDescriptionResource = Res.string.cancel
     )
     data object Add: IconVector(
         imageVector = Icons.Default.Add,
-        contentDescriptionId = R.string.add
+        contentDescriptionResource = Res.string.add
     )
     data object Logout: IconVector(
         imageVector = Icons.AutoMirrored.Filled.Logout,
-        contentDescriptionId = R.string.log_out
+        contentDescriptionResource = Res.string.log_out
     )
     data object Save: IconVector(
         imageVector = Icons.Default.Save,
-        contentDescriptionId = R.string.save
+        contentDescriptionResource = Res.string.save
     )
     data object Edit: IconVector(
         imageVector = Icons.Default.Edit,
-        contentDescriptionId = R.string.edit
+        contentDescriptionResource = Res.string.edit
     )
     data object Email: IconVector(
         imageVector = Icons.Default.Email,
-        contentDescriptionId = R.string.email
+        contentDescriptionResource = Res.string.email
     )
     data object Password: IconVector(
         imageVector = Icons.Default.Password,
-        contentDescriptionId = R.string.password
+        contentDescriptionResource = Res.string.password
     )
     data object Login: IconVector(
         imageVector = Icons.AutoMirrored.Filled.Login,
-        contentDescriptionId = R.string.login
+        contentDescriptionResource = Res.string.login
     )
     data object Account: IconVector(
         imageVector = Icons.Default.AccountCircle,
-        contentDescriptionId = R.string.account
+        contentDescriptionResource = Res.string.account
     )
     data object Info: IconVector(
         imageVector = Icons.Default.Info,
-        contentDescriptionId = R.string.info
+        contentDescriptionResource = Res.string.info
     )
     data object ArrowDown: IconVector(
         imageVector = Icons.Default.KeyboardArrowDown,
-        contentDescriptionId = R.string.arrow_down
+        contentDescriptionResource = Res.string.arrow_down
     )
     data object Copy: IconVector(
         imageVector = Icons.Default.ContentCopy,
-        contentDescriptionId = R.string.copy
+        contentDescriptionResource = Res.string.copy
     )
     data object Warning: IconVector(
         imageVector = Icons.Default.Error,
-        contentDescriptionId = R.string.error
+        contentDescriptionResource = Res.string.error
     )
     data object Clear: IconVector(
         imageVector = Icons.Default.Clear,
-        contentDescriptionId = R.string.clear
+        contentDescriptionResource = Res.string.clear
     )
 }
