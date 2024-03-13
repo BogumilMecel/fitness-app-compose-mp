@@ -15,6 +15,7 @@ data class FitnessAppColorScheme(
     val surface: Color,
     val contentPrimary: Color,
     val contentSecondary: Color,
+    val contentTertiary: Color,
     val onBackground: Color,
     val error: Color,
     val backgroundError: Color,
@@ -33,6 +34,7 @@ fun lightFitnessAppColorSchema() = FitnessAppColorScheme(
     fat = fatLight,
     contentPrimary = contentPrimaryLight,
     contentSecondary = contentSecondaryLight,
+    contentTertiary = contentTertiary,
     onBackground = contentPrimaryLight,
     backgroundError = backgroundErrorLight,
     border = borderLight
@@ -50,6 +52,7 @@ fun darkFitnessAppColorSchema() = FitnessAppColorScheme(
     error = errorDark,
     contentPrimary = contentPrimaryDark,
     contentSecondary = contentSecondaryDark,
+    contentTertiary = contentTertiary,
     onBackground = contentPrimaryDark,
     backgroundError = backgroundErrorDark,
     border = borderDark
@@ -63,6 +66,8 @@ private val contentPrimaryLight = Color.Black
 
 private val contentSecondaryDark = Color(0xFFbfbfbf)
 private val contentSecondaryLight = Color(0xFF737373)
+
+private val contentTertiary = Color(0xFFC0999999)
 
 private val backgroundLight = Color(0xffffffff)
 private val backgroundDark = Color(0xFF121212)

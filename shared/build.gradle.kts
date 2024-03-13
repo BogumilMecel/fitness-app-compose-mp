@@ -36,8 +36,14 @@ kotlin {
             api(project(":ui"))
             api(libs.kotling.logging)
 
-            //navigation
+            //koin
+            api(libs.koin.core)
+            api(libs.koin.compose)
+
+            //voyager
             api(libs.voyager.navigator)
+            api(libs.voyager.screenmodel)
+            api(libs.voyager.koin)
         }
     }
 }

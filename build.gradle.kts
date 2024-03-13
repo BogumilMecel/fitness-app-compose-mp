@@ -7,4 +7,11 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform) apply false
     alias(libs.plugins.jetbrains.kotlin.android) apply false
     alias(libs.plugins.kotlin.serialization) apply false
+    alias(libs.plugins.moko.resources) apply false
+}
+
+buildscript {
+    dependencies {
+        classpath(libs.moko.resources.generator)
+    }
 }

@@ -30,8 +30,6 @@ kotlin {
         }
         commonMain.dependencies {
             implementation(project(":shared"))
-
-            implementation(compose.components.resources)
         }
     }
 }
