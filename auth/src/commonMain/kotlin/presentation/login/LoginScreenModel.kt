@@ -10,9 +10,25 @@ class LoginScreenModel: ScreenModel {
 
     fun onEmailChanged(value: String) {
         state.update {
-            it.copy(
-                email = value
-            )
+            it.copy(email = value)
         }
+    }
+
+    fun onPasswordChanged(value: String) {
+        state.update {
+            it.copy(password = value)
+        }
+    }
+
+    fun onLoginButtonClicked() {
+
+    }
+
+    fun onForgotPasswordClicked() {
+
+    }
+
+    fun onRegisterButtonClicked() {
+
     }
 }

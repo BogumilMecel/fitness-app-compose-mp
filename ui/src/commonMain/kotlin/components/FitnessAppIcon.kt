@@ -52,14 +52,14 @@ import org.jetbrains.compose.resources.stringResource
 import theme.FitnessAppTheme
 
 @Composable
-fun CustomIcon(
+fun FitnessAppIcon(
     modifier: Modifier = Modifier,
     icon: Icon,
     tint: Color = FitnessAppTheme.colors.contentPrimary
 ) {
     when(icon) {
         is IconPainter -> {
-            CustomIcon(
+            FitnessAppIcon(
                 painter = icon,
                 tint = tint,
                 modifier = modifier
@@ -67,7 +67,7 @@ fun CustomIcon(
         }
 
         is IconVector -> {
-            CustomIcon(
+            FitnessAppIcon(
                 vector = icon,
                 tint = tint,
                 modifier = modifier
@@ -78,7 +78,7 @@ fun CustomIcon(
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
-private fun CustomIcon(
+private fun FitnessAppIcon(
     modifier: Modifier = Modifier,
     vector: IconVector,
     tint: Color
@@ -93,7 +93,7 @@ private fun CustomIcon(
 
 @OptIn(ExperimentalResourceApi::class)
 @Composable
-private fun CustomIcon(
+private fun FitnessAppIcon(
     modifier: Modifier = Modifier,
     painter: IconPainter,
     tint: Color = FitnessAppTheme.colors.contentPrimary

@@ -19,7 +19,7 @@ fun FitnessAppIconButton(
         enabled = enabled,
         onClick = onClick,
     ) {
-        CustomIcon(
+        FitnessAppIcon(
             icon = icon,
             tint = tint
         )

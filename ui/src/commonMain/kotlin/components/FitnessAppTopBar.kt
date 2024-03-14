@@ -35,6 +35,7 @@ fun FitnessAppTopBar(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier
                 .weight(1f)
+                .padding(vertical = 12.dp)
                 .padding(end = 48.dp)
                 .then(
                     other = if (onBackPressed == null) {
