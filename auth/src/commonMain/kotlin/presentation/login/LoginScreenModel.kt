@@ -1,10 +1,11 @@
 package presentation.login
 
-import cafe.adriel.voyager.core.model.ScreenModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
+import presentation.register.RegisterScreen
+import utils.BaseModel
 
-class LoginScreenModel: ScreenModel {
+class LoginScreenModel: BaseModel() {
 
     val state = MutableStateFlow(LoginState())
 
@@ -29,6 +30,6 @@ class LoginScreenModel: ScreenModel {
     }
 
     fun onRegisterButtonClicked() {
-
+        navigateTo(RegisterScreen())
     }
 }

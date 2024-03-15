@@ -1,8 +1,8 @@
 package presentation.register
 
-import cafe.adriel.voyager.core.model.ScreenModel
+import utils.BaseModel
 
-class RegisterScreenModel: ScreenModel {
+class RegisterScreenModel: BaseModel() {
 
 
 }
